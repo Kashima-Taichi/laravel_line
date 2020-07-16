@@ -13,3 +13,14 @@ $ cd ~/laravel-linebot/laradock
 $ docker-compose up -d workspace php-fpm nginx
 $ docker-compose exec workspace composer create-project --prefer-dist laravel/laravel . "6.8.*"
 ここで localhost にアクセスをしてLaravelの画面が表示されればOK
+
+[Dcoker環境でコントローラーファイルを作成する]
+$ docker-compose exec workspace php artisan make:controller LineBotController
+
+[LineのAPIの設定]
+Provider : Laravel_Taichi's_App
+Channel name : Laravel_Test_App
+Channel description : Laravelでアプリケーションを作成してみました。
+
+[LineのSDKのインストール]
+$ docker-compose exec workspace composer require linecorp/line-bot-sdk 4.2.*
