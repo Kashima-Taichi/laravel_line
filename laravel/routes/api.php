@@ -19,5 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //Route::post('/parrot', 'LineBotController@parrot');
 
-Route::post('/restaurants', 'LineBotController@restaurants');
+Route::post('/zen', 'LineBotZenController@zen');
+
+//Route::post('/restaurants', 'LineBotController@restaurants');
 
